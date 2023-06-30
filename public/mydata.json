@@ -1,0 +1,74 @@
+{
+    "first_name": "Taisuke",
+    "last_name": "Tsujinaga",
+    "first_name_ja": "泰輔",
+    "last_name_ja": "辻永",
+    "first_name_kana": "タイスケ",
+    "last_name_kana": "ツジナガ",
+    "email": "",
+    "accounts": {
+        "twitter": "Gachal29",
+        "github": "Gachal29"
+    },
+    "job": "Web開発エンジニア",
+    "oganizations": [
+        {
+            "name": "北海道情報大学",
+            "position": "湯村研究室 4年"
+        },
+        {
+            "name": "ObotAI株式会社",
+            "position": "アルバイト"
+        }
+    ],
+    "history": [
+        {
+            "year": 2002,
+            "month": 1,
+            "day": 29,
+            "description": "北海道 中富良野町で生まれた。"
+        },
+        {
+            "year": 2020,
+            "month": 3,
+            "description": "北海道情報大学　情報メディア学部情報メディア学科に入学。"
+        }
+    ],
+    "skill": [
+        {
+            "category": "言語",
+            "contents": [
+                {
+                    "name": "Python",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "category": "Webバックエンド",
+            "contents": [
+                {
+                    "name": "Django",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "category": "Webフロントエンド",
+            "contents": [
+                {
+                    "name": "Next.js",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "developed": [],
+    "library": [
+        {
+            "title": "",
+            "url": "",
+            "description": ""
+        }
+    ]
+}
