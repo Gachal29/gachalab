@@ -10,8 +10,8 @@
         "twitter": "Gachal29",
         "github": "Gachal29"
     },
-    "job": "Web開発エンジニア",
-    "oganizations": [
+    "job": "大学生",
+    "organizations": [
         {
             "name": "北海道情報大学",
             "position": "湯村研究室 4年"
@@ -34,7 +34,7 @@
             "description": "北海道情報大学　情報メディア学部情報メディア学科に入学。"
         }
     ],
-    "skill": [
+    "skills": [
         {
             "category": "言語",
             "contents": [
