@@ -10,6 +10,13 @@ export interface Accounts {
   github?: string
 }
 
+export interface HistoryContent {
+  year: number
+  month?: number
+  day?: number
+  description: string
+}
+
 export class Mydata {
   constructor (
     public firstName?: string,
@@ -22,7 +29,7 @@ export class Mydata {
     public accounts?: Accounts,
     public job?: string,
     public organizations?: Array<IOrganizations>,
-    public history?: Array<any>,
+    public history?: Array<HistoryContent>,
     public skills?: Array<any>,
     public developed?: Array<any>,
     public library?: Array<any>

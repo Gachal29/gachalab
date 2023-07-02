@@ -1,4 +1,5 @@
 "use client"
+
 import useMydata from "utils/useMydata"
 import { NextPage } from "next"
 import Link from "next/link"
@@ -7,11 +8,13 @@ import useWindowSize from "utils/useWindowSize"
 import Organizations from "components/Organizations"
 import { Mydata } from "model/mydata"
 import { useState } from "react"
+import QRCode from "react-qr-code"
 
 
 const NameCard: NextPage = () => {
   const windowSize = useWindowSize()
   const mydata: Mydata = useMydata()
+  
   const [mode, setMode] = useState("default")
   const handleMode = (m: string) => {
     if (mode === m) {
@@ -30,16 +33,20 @@ const NameCard: NextPage = () => {
     <>
       <header className="navbar navbar-base-100 lg:text-2xl">
         <div className="navbar-start">
-          <Link href="/">
-            トップページへ
-          </Link>
+          <Link href="/">トップページへ</Link>
         </div>
       </header>
       <main className="w-full">
         <div className="card lg:w-1/2 w-4/5 bg-base-100 shadow-xl mx-auto">
           <figure>
-            {mode == "default" &&
-              <Image src="/icon.jpg" alt="Main Image" width={windowSize.width} height={windowSize.height} />
+            {mode === "default" &&
+              <Image src="/icon.jpg" alt="Icon" width={windowSize.width} height={windowSize.height} />
+            }
+            {mode === "twitter" &&
+              <QRCode value={ `https://twitter.com/${mydata.accounts?.twitter}` } />
+            }
+            {mode === "portfolio" &&
+              <QRCode value={ window.location.host } />
             }
           </figure>
           <div className="card-body">

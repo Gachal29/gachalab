@@ -1,74 +1,78 @@
 {
-    "first_name": "Taisuke",
-    "last_name": "Tsujinaga",
-    "first_name_ja": "泰輔",
-    "last_name_ja": "辻永",
-    "first_name_kana": "タイスケ",
-    "last_name_kana": "ツジナガ",
-    "email": "",
-    "accounts": {
-        "twitter": "Gachal29",
-        "github": "Gachal29"
+  "first_name": "Taisuke",
+  "last_name": "Tsujinaga",
+  "first_name_ja": "泰輔",
+  "last_name_ja": "辻永",
+  "first_name_kana": "タイスケ",
+  "last_name_kana": "ツジナガ",
+  "email": "",
+  "accounts": {
+    "twitter": "Gachal29",
+    "github": "Gachal29"
+  },
+  "job": "大学生",
+  "organizations": [
+    {
+      "name": "北海道情報大学",
+      "position": "湯村研究室 4年"
     },
-    "job": "大学生",
-    "organizations": [
+    {
+      "name": "ObotAI株式会社",
+      "position": "アルバイト"
+    }
+  ],
+  "history": [
+    {
+      "year": 2002,
+      "month": 1,
+      "day": 29,
+      "description": "北海道の中富良野町で生まれた。"
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "description": "北海道情報大学 情報メディア学部情報メディア学科に入学。"
+    },
+    {
+      "year": 2021,
+      "description": "セキュリティを勉強したいと考えて、SecHack365 思索駆動コースに参加。セキュリティよりもWebアプリケーションを開発することで生活便利にしていきたいと考え、本格的にWebアプリケーション開発の学習を始めました。"
+    }
+  ],
+  "skills": [
+    {
+      "category": "言語",
+      "contents": [
         {
-            "name": "北海道情報大学",
-            "position": "湯村研究室 4年"
-        },
-        {
-            "name": "ObotAI株式会社",
-            "position": "アルバイト"
+          "name": "Python",
+          "description": "言語を選ばない開発では、Pythonを使用することが多いです。"
         }
-    ],
-    "history": [
+      ]
+    },
+    {
+      "category": "Webバックエンド",
+      "contents": [
         {
-            "year": 2002,
-            "month": 1,
-            "day": 29,
-            "description": "北海道 中富良野町で生まれた。"
-        },
-        {
-            "year": 2020,
-            "month": 3,
-            "description": "北海道情報大学　情報メディア学部情報メディア学科に入学。"
+          "name": "Django",
+          "description": ""
         }
-    ],
-    "skills": [
+      ]
+    },
+    {
+      "category": "Webフロントエンド",
+      "contents": [
         {
-            "category": "言語",
-            "contents": [
-                {
-                    "name": "Python",
-                    "description": ""
-                }
-            ]
-        },
-        {
-            "category": "Webバックエンド",
-            "contents": [
-                {
-                    "name": "Django",
-                    "description": ""
-                }
-            ]
-        },
-        {
-            "category": "Webフロントエンド",
-            "contents": [
-                {
-                    "name": "Next.js",
-                    "description": ""
-                }
-            ]
+          "name": "Next.js",
+          "description": ""
         }
-    ],
-    "developed": [],
-    "library": [
-        {
-            "title": "",
-            "url": "",
-            "description": ""
-        }
-    ]
+      ]
+    }
+  ],
+  "developed": [],
+  "library": [
+    {
+      "title": "",
+      "url": "",
+      "description": ""
+    }
+  ]
 }
