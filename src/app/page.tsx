@@ -8,6 +8,7 @@ import Link from "next/link"
 import useMydata from "utils/useMydata"
 import Skills from "components/Skills"
 import Library from "components/Library"
+import { Birthday } from "model/mydata"
 
 const Home: NextPage = () => {
   const mydata: Mydata = useMydata()
@@ -16,6 +17,15 @@ const Home: NextPage = () => {
     return (
       <span className="loading loading-spinner loading-lg"></span>
     )
+  }
+
+  const getAge = (birthday: Birthday): number => {
+    const today = new Date()
+    const thisYearsBirthday = new Date(today.getFullYear(), birthday.month-1, birthday.day)
+    let age: number = today.getFullYear() - birthday.year
+
+    if (today < thisYearsBirthday) age--
+    return age
   }
 
   return (
@@ -37,6 +47,18 @@ const Home: NextPage = () => {
         <div className="my-4 py-2 px-4 grid w-full card border border-neutral-focus rounded-box text-xl">
           <h2 className="text-center text-2xl font-bold mb-2">基本情報</h2>
           
+          <p className="mb-2">
+            <b>名前：</b>
+            { `${mydata.lastNameJa} ${mydata.firstNameJa} (${mydata.lastNameKana} ${mydata.firstNameKana})` }
+          </p>
+
+          {mydata.birthday &&
+            <p className="mb-2">
+              <b>誕生日：</b>
+              { `${mydata.birthday.year}年${mydata.birthday.month}月${mydata.birthday.day}日 (${getAge(mydata.birthday)})` }
+            </p>
+          }
+
           <p className="mb-2">
             <b>職業：</b>
             { mydata.job }

@@ -34,6 +34,12 @@ export interface LibraryContent {
   description?: string
 }
 
+export interface Birthday {
+  year: number,
+  month: number,
+  day: number,
+}
+
 export class Mydata {
   constructor (
     public lastUpdate: string,
@@ -44,6 +50,7 @@ export class Mydata {
     public lastNameJa?: string,
     public firstNameKana?: string,
     public lastNameKana?: string,
+    public birthday?: Birthday,
     public email?: string,
     public accounts?: Accounts,
     public job?: string,
@@ -65,6 +72,7 @@ export class Mydata {
       parsedData.last_name_ja || null,
       parsedData.first_name_kana || null,
       parsedData.last_name_kana || null,
+      parsedData.birthday || null,
       parsedData.email || null,
       parsedData.accounts || null,
       parsedData.job || null,
