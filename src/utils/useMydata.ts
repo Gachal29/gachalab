@@ -3,7 +3,8 @@ import { Mydata } from "model/mydata"
 
 
 const useMydata = () => {
-  const [mydata, setMydata] = useState<Mydata>({})
+  const mydataStart: Mydata = new Mydata("", "")
+  const [mydata, setMydata] = useState<Mydata>(mydataStart)
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("/mydata.json")

@@ -6,6 +6,8 @@ import { Mydata } from "model/mydata"
 import { NextPage } from "next"
 import Link from "next/link"
 import useMydata from "utils/useMydata"
+import Skills from "components/Skills"
+import Library from "components/Library"
 
 const Home: NextPage = () => {
   const mydata: Mydata = useMydata()
@@ -15,8 +17,6 @@ const Home: NextPage = () => {
       <span className="loading loading-spinner loading-lg"></span>
     )
   }
-
-  console.log(mydata.history)
 
   return (
     <>
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
             <b>職業：</b>
             { mydata.job }
           </p>
-          {!mydata.organizations || mydata.organizations.length > 0 &&
+          {mydata.organizations &&
             <div className="mb-2">
               <b>所属：</b>
               <Organizations organizations={ mydata.organizations } />
@@ -51,11 +51,27 @@ const Home: NextPage = () => {
           </div>
         </div>
 
+        {mydata.skills &&
+          <div className="my-4 py-2 px-4 grid w-full card border border-neutral-focus rounded-box text-xl">
+            <h2 className="text-center text-2xl font-bold mb-2">技術スキル</h2>
+            
+            <Skills skills={ mydata.skills } />
+          </div>
+        }
+
         <div className="my-4 py-2 px-4 grid w-full card border border-neutral-focus rounded-box text-xl">
-          <h2 className="text-center text-2xl font-bold mb-2">技術スキル</h2>
+          <h2 className="text-center text-2xl font-bold mb-2">開発</h2>
           
           準備中...
         </div>
+
+        {mydata.library &&
+          <div className="my-4 py-2 px-4 grid w-full card border border-neutral-focus rounded-box text-xl">
+            <h2 className="text-center text-2xl font-bold mb-2">執筆</h2>
+            
+            <Library library={ mydata.library } />
+          </div>
+        }
 
         <div className="my-4 py-2 px-4 grid w-full card border border-neutral-focus rounded-box text-xl">
           <h2 className="text-center text-2xl font-bold mb-2">略歴</h2>
@@ -64,21 +80,18 @@ const Home: NextPage = () => {
           }
         </div>
 
-        <div className="my-4 py-2 px-4 grid w-full card border border-neutral-focus rounded-box text-xl">
-          <h2 className="text-center text-2xl font-bold mb-2">開発</h2>
+        <div className="my-4 py-2 px-4 grid w-full card border border-neutral-focus rounded-box text-xl text-center">
+          <h2 className="text-center text-2xl font-bold mb-2">ひとこと</h2>
           
-          準備中...
-        </div>
-
-        <div className="my-4 py-2 px-4 grid w-full card border border-neutral-focus rounded-box text-xl">
-          <h2 className="text-center text-2xl font-bold mb-2">執筆</h2>
-          
-          準備中...
+          {mydata.comment}
         </div>
       </main>
-      <footer className="flex justify-center my-2">
-        <Link href={ "https://twitter.com/" + mydata.accounts?.twitter } className="btn btn-outline btn-info mx-1">Twitter</Link>
-        <Link href={ "https://github.com/" + mydata.accounts?.github } className="btn btn-outline mx-1">Github</Link>
+      <footer className="my-2 text-center">
+        <div className="flex justify-center">
+          <Link href={ "https://twitter.com/" + mydata.accounts?.twitter } className="btn btn-outline btn-info mx-1">Twitter</Link>
+          <Link href={ "https://github.com/" + mydata.accounts?.github } className="btn btn-outline mx-1">Github</Link>
+        </div>
+        <p className="my-4">最終更新：{ mydata.lastUpdate }</p>
       </footer>
     </>
   )

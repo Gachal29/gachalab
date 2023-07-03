@@ -36,17 +36,17 @@ const NameCard: NextPage = () => {
           <Link href="/">トップページへ</Link>
         </div>
       </header>
-      <main className="w-full">
-        <div className="card lg:w-1/2 w-4/5 bg-base-100 shadow-xl mx-auto">
+      <main className="w-full mb-4">
+        <div className={ `card lg:w-1/2 w-4/5 bg-base-100 shadow-xl mx-auto ${mode === "twitter" && "border border-neutral-focus"} ${mode === "portfolio" && "border border-accent-focus"}` }>
           <figure>
             {mode === "default" &&
               <Image src="/icon.jpg" alt="Icon" width={windowSize.width} height={windowSize.height} />
             }
             {mode === "twitter" &&
-              <QRCode value={ `https://twitter.com/${mydata.accounts?.twitter}` } />
+              <QRCode value={ `https://twitter.com/${mydata.accounts?.twitter}` } className="mt-8" />
             }
             {mode === "portfolio" &&
-              <QRCode value={ window.location.host } />
+              <QRCode value={ window.location.host } className="mt-8" />
             }
           </figure>
           <div className="card-body">

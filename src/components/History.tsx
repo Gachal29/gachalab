@@ -22,7 +22,6 @@ const History: NextPage<Props> = ({ history }) => {
       </li>
     )
   }, { index: 1 })
-  console.log(history)
 
   return (<ul className="list-inside">{ historyElem }</ul>)
 }

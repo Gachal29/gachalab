@@ -1,4 +1,6 @@
 {
+  "last_update": "2023/07/04",
+  "comment": "好き勝手作ったモノが誰かの為になれば良い",
   "first_name": "Taisuke",
   "last_name": "Tsujinaga",
   "first_name_ja": "泰輔",
@@ -45,6 +47,30 @@
         {
           "name": "Python",
           "description": "言語を選ばない開発では、Pythonを使用することが多いです。"
+        },
+        {
+          "name": "JavaScript (TypeScript)",
+          "description": "JavaScriptがわかるようになってきたので、最近はTypeScriptを使うように意識しています。"
+        },
+        {
+          "name": "C++",
+          "description": "大学でTAをやっていました。ある程度書けますが、普段使うことはありません。"
+        },
+        {
+          "name": "PHP",
+          "description": "授業でやって、アルバイトで少し触りました。現在はほとんど触っていません。"
+        },
+        {
+          "name": "C#",
+          "description": "ハッカソンでUnityを使ってゲームを作った際に、一度だけ触りました。"
+        },
+        {
+          "name": "HTML",
+          "description": ""
+        },
+        {
+          "name": "CSS",
+          "description": "tailwindcss (daisyUI)とSassを使っています。"
         }
       ]
     },
@@ -53,7 +79,7 @@
       "contents": [
         {
           "name": "Django",
-          "description": ""
+          "description": "現在、Djangoの機能をマスターしようと学習中。アルバイトでも使用しています。"
         }
       ]
     },
@@ -62,7 +88,28 @@
       "contents": [
         {
           "name": "Next.js",
-          "description": ""
+          "description": "DBを使わない開発は、Nextで開発してVercelで公開が定番になりそう。このポートフォリオはNext.jsで開発しました。"
+        },
+        {
+          "name": "Vue.js",
+          "description": "アルバイトでちょこちょこ触っています。"
+        },
+        {
+          "name": "p5.js",
+          "description": "ゼミで触った。特定の要件で使いたい時がたまにある。"
+        }
+      ]
+    },
+    {
+      "category": "データベース",
+      "contents": [
+        {
+          "name": "MySQL",
+          "description": "Webアプリケーション開発はほぼMySQLを使っています。"
+        },
+        {
+          "name": "Redis",
+          "description": "pythonのceleryと合わせて触ったことがあります。"
         }
       ]
     }
@@ -70,9 +117,10 @@
   "developed": [],
   "library": [
     {
-      "title": "",
-      "url": "",
-      "description": ""
+      "date": "2022/12/09",
+      "title": "Furm: 家具移動アプリケーションの提案",
+      "url": "https://dl.yumulab.org/papers/30",
+      "description": "家具移動ロボットを用い，スマートフォンを操作するだけで家具を移動する家具移動アプリケーション."
     }
   ]
 }

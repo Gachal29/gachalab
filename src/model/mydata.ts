@@ -17,8 +17,27 @@ export interface HistoryContent {
   description: string
 }
 
+export interface Skill {
+  category: string
+  contents: Array<SkillContents>
+}
+
+export interface SkillContents {
+  name: string
+  description: string
+}
+
+export interface LibraryContent {
+  date: string
+  title: string
+  url: string
+  description?: string
+}
+
 export class Mydata {
   constructor (
+    public lastUpdate: string,
+    public comment: string,
     public firstName?: string,
     public lastName?: string,
     public firstNameJa?: string,
@@ -30,14 +49,16 @@ export class Mydata {
     public job?: string,
     public organizations?: Array<IOrganizations>,
     public history?: Array<HistoryContent>,
-    public skills?: Array<any>,
+    public skills?: Array<Skill>,
     public developed?: Array<any>,
-    public library?: Array<any>
+    public library?: Array<LibraryContent>,
   ) {}
 
   static fromJSON(jsonData: string): Mydata {
     const parsedData = JSON.parse(jsonData)
     return new Mydata(
+      parsedData.last_update,
+      parsedData.comment,
       parsedData.first_name || null,
       parsedData.last_name || null,
       parsedData.first_name_ja || null,
@@ -51,7 +72,7 @@ export class Mydata {
       parsedData.history || null,
       parsedData.skills || null,
       parsedData.developed || null,
-      parsedData.library || null
+      parsedData.library || null,
     )
   }
 }
